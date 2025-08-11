@@ -42,7 +42,7 @@ def romanToInt(self, s: str) -> int:
         
         return ans + roman[s[-1]]
 
-# 4. http://leetcode.com/problems/intersection-of-two-arrays-ii/description/
+# 4. http://leetcode.com/problems/intersection-of-two-arrays-ii/description/ (2 pointer algo)
 
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
