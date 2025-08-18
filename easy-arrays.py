@@ -88,7 +88,6 @@ class Solution:
         j = 0
         for i in range(len(nums)):
             if nums[i] != 0:
-                temp = nums[i]
-                nums[i] = nums[j]
-                nums[j] = temp
+                #Swapping
+                nums[i],nums[j]=nums[j],nums[i]
                 j+=1
