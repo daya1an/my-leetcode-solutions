@@ -79,3 +79,16 @@ class Solution:
             digits[i] = 0 
         
         return [1] + digits
+
+
+# 6.  Move Zeroes
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        j = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                temp = nums[i]
+                nums[i] = nums[j]
+                nums[j] = temp
+                j+=1
