@@ -37,3 +37,42 @@ class Solution:
         if len(s) == len(t) and sorted(s) == sorted(t):
             return True
         return False
+
+#     String to Integer (atoi)
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        op = ""
+        s = s.lstrip()
+        
+        #checking empty string and starting characters
+        if s == "" or s[0].isalpha() or s[0] == ".":
+            print("RETURN 1")
+            return 0
+        
+        sign = 1
+        i = 0
+        
+        # Handle sign
+        if s[0] in ['-', '+']:
+            if s[0] == '-':
+                sign = -1
+            i += 1
+        
+        # Parse digits
+        num = 0
+        while i < len(s) and s[i].isdigit():
+            num = num * 10 + int(s[i])
+            i += 1
+        
+        num *= sign
+
+        # handle max and min values     
+        if num > 2**31 -1:
+            print("RETURN 6")
+            return 2**31-1
+        
+        if num < -2**31:
+            print("RETURN 7")
+            return -2**31
+        
+        return num
