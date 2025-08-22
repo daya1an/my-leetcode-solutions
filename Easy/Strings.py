@@ -1,5 +1,4 @@
 #   Reverse Integer
-
 def reverse(self, x: int) -> int:
     if x > 0:
         x = int(str(x)[::-1])
@@ -12,7 +11,6 @@ def reverse(self, x: int) -> int:
     return x
 
 #   First Unique Character in a String
-
 def firstUniqChar(self, s: str) -> int:
     cnt = {}
     op = -1
@@ -29,7 +27,6 @@ def firstUniqChar(self, s: str) -> int:
     return -1
 
 #   Valid Anagram
-
 def isAnagram(self, s: str, t: str) -> bool:
     if len(s) == len(t) and sorted(s) == sorted(t):
         return True
@@ -72,3 +69,29 @@ def myAtoi(self, s: str) -> int:
         return -2**31
     
     return num
+
+#  Implement strStr()
+def strStr(self, haystack: str, needle: str) -> int:
+        r = -1
+        
+        for i in range(len(haystack)):
+            if haystack[i] == needle[0]:
+                print(str(haystack[i:i+len(needle)]), needle)
+                if haystack[i:i+len(needle)] == needle:
+                    r = i
+                    break
+        return r
+
+# Longest Common Prefix
+def longestCommonPrefix(self, strs: List[str]) -> str:
+        n = len(strs)
+        prfx = strs[0]
+
+        if (len(strs)==1):
+            return strs[0]
+        for i in range(len(strs)):
+            while not strs[i].startswith(prfx):
+                prfx = prfx[:-1]
+                if not prfx:
+                    return ""
+        return prfx
