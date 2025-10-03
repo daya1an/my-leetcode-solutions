@@ -40,6 +40,7 @@ class Solution:
         
         return dummy.next
 
+# Merge and Sort Two Sorted Lists.ll
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -52,7 +53,7 @@ class Solution:
         if not list1 and not list2:
             return None
 
-        if not list1:
+        if not list1:l
             return list2
         if not list2:
             return list1
