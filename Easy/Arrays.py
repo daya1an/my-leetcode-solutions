@@ -91,3 +91,20 @@ class Solution:
                 #Swapping
                 nums[i],nums[j]=nums[j],nums[i]
                 j+=1
+
+# 7. Majority Element
+#Given an array nums of size n, return the majority element.
+#The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        # res = 0
+        # numsSet = set(nums)
+        # for i in numsSet:
+        #     if maxCount < nums.count(i):
+        #         maxCount = nums.count(i)
+        #         res = i
+        
+        # return 
+        
+        nums = sorted(nums)
+        return nums[int(len(nums)/2)]
